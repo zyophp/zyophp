@@ -1,0 +1,27 @@
+# Dependências
+/vendor/
+
+# Ambiente
+.env
+
+# Storage (gerados em runtime)
+/storage/logs/*
+/storage/views/*
+/storage/cache/*
+!storage/logs/.gitkeep
+!storage/views/.gitkeep
+!storage/cache/.gitkeep
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Composer
+composer.lock

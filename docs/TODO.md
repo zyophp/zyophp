@@ -30,29 +30,23 @@ zyophp/
 │   ├── Controllers/              #    HomeController, UserController...
 │   ├── Models/                   #    User, Post...
 │   ├── Middlewares/              #    AuthMiddleware, GuestMiddleware...
-│   └── Providers/                #    AppServiceProvider...
-│
-├── config/                       # ⚙️  Configurações da aplicação
-│   ├── app.php
-│   ├── database.php
-│   └── security.php
-│
-├── resources/                    # 🎨 Assets e Views
-│   └── views/
-│       ├── layouts/
-│       │   └── app.blade.php
-│       ├── home.blade.php
-│       └── errors/
-│           ├── 404.blade.php
-│           └── 500.blade.php
+│   ├── Providers/                #    AppServiceProvider...
+│   ├── Config/                   #    ⚙️ Configurações (app, database, security)
+│   ├── Resources/                #    🎨 Assets e Views
+│   │   └── views/
+│   │       ├── layouts/
+│   │       │   └── app.blade.php
+│   │       ├── home.blade.php
+│   │       └── errors/
+│   │           ├── 404.blade.php
+│   │           └── 500.blade.php
+│   └── Database/                 #    🗄️ Migrations e Seeds
+│       ├── migrations/
+│       └── seeds/
 │
 ├── routes/                       # 🛣️  Definição de rotas
 │   ├── web.php
 │   └── api.php
-│
-├── database/                     # 🗄️  Migrations e Seeds
-│   ├── migrations/
-│   └── seeds/
 │
 ├── storage/                      # 📦 Cache, Logs, Views compiladas
 │   ├── cache/
@@ -94,14 +88,14 @@ zyophp/
 
 ---
 
-## Fase 1 — Estrutura Base do Projeto
+## Fase 1 — Estrutura Base do Projeto ✅
 
-- [ ] Inicializar o projeto com `composer init`
-- [ ] Configurar autoload PSR-4 duplo: `Zyo\` → `src/` e `App\` → `app/`
-- [ ] Criar toda a árvore de diretórios (framework + aplicação)
-- [ ] Criar `public/index.php` (front controller)
-- [ ] Criar `.htaccess` para Apache (rewrite)
-- [ ] Criar `.gitignore` (vendor, .env, storage/views, storage/logs)
+- [x] Inicializar o projeto com `composer init`
+- [x] Configurar autoload PSR-4 duplo: `Zyo\` → `src/` e `App\` → `app/`
+- [x] Criar toda a árvore de diretórios (framework + aplicação)
+- [x] Criar `public/index.php` (front controller)
+- [x] Criar `.htaccess` para Apache (rewrite)
+- [x] Criar `.gitignore` (vendor, .env, storage/views, storage/logs)
 
 ---
 
