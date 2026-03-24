@@ -13,18 +13,33 @@ Coração do framework: inicialização, container de DI e ciclo de vida.
 
 ## App
 
-Singleton principal — container de DI (PSR-11).
+A classe `App` é o singleton principal e herda diretamente de `Zyo\Core\Container`, o que significa que ela própria é o container de DI (PSR-11).
+
+### Uso Básico
 
 ```php
 $app = App::getInstance();
 $app->setBasePath(BASE_PATH);
 
-// Container
+// Registro no Container
 $app->bind(MyService::class, fn() => new MyService());
+
+// Singleton
 $app->singleton(Database::class, fn() => new Database(config('database')));
-$app->get(Database::class);
-$app->has(Database::class); // true
+
+// Recuperação
+$db = $app->get(Database::class);
+$hasDb = $app->has(Database::class); // true
 ```
+
+### Caminhos da Aplicação
+
+O objeto `App` também gerencia os caminhos base do sistema, permitindo acessá-los via container ou métodos:
+- `path.base`: `/`
+- `path.config`: `/app/Config`
+- `path.public`: `/public`
+- `path.storage`: `/storage`
+
 
 ## Kernel
 

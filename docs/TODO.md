@@ -99,14 +99,14 @@ zyophp/
 
 ---
 
-## Fase 2 — Kernel e Container de Dependências _(Framework)_
+## Fase 2 — Kernel e Container de Dependências _(Framework)_ ✅
 
-- [ ] Criar `Zyo\Core\App` — singleton, bootstrap da aplicação
-- [ ] Implementar Container de DI simples (PSR-11 compatível)
-- [ ] Criar `Zyo\Core\Kernel` — ciclo de vida: boot → request → response
-- [ ] Criar `Zyo\Core\ServiceProvider` — classe base para registrar serviços
-- [ ] Registrar bindings padrão (Router, Request, Response, Config)
-- [ ] Carregar configurações de `config/*.php`
+- [x] Criar `Zyo\Core\App` — singleton, bootstrap da aplicação
+- [x] Implementar Container de DI simples (PSR-11 compatível)
+- [x] Criar `Zyo\Core\Kernel` — ciclo de vida: boot → request → response
+- [x] Criar `Zyo\Core\ServiceProvider` — classe base para registrar serviços
+- [x] Registrar bindings padrão (Router, Request, Response, Config)
+- [x] Carregar configurações de `config/*.php`
 
 ---
 

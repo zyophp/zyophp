@@ -14,7 +14,7 @@ Microframework PHP MVC moderno, leve e seguro, construído com foco em separaç�
 ## 🚀 Início Rápido
 
 ### Requisitos
-- PHP >= 8.1
+- PHP >= 8.4
 - Composer
 
 ### Instalação

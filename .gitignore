@@ -25,3 +25,5 @@ Thumbs.db
 
 # Composer
 composer.lock
+.phpunit.cache/*
+tests/result/*

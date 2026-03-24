@@ -51,16 +51,17 @@ Responsável por "acender" o framework:
 - Retorna o objeto `$app` para o Front Controller.
 
 ### 3. Registro e Boot (`Zyo\Core\App`)
-Ao iniciar, o objeto `App`:
-- **Load Env**: Carrega o arquivo `.env`.
-- **Load Config**: Carrega as configurações de `app/Config/`.
-- **Register Providers**: Registra todos os Service Providers do sistema.
-- **Boot Providers**: Invoca o método `boot()` de cada provider.
+
+Diferente de frameworks pesados, o ZyoPHP utiliza um processo de bootstrapping otimizado:
+- **BasePaths**: Ao ser instanciada, a `App` define os caminhos fundamentais (`path`, `path.config`, etc).
+- **ServiceProviders**: Os provedores de serviço são registrados para ligar as interfaces às suas implementações no container.
+- **Kernel Handle**: O `$app->run()` invoca o `Kernel`, que assume a responsabilidade de processar o ciclo de vida.
 
 ### 4. Kernel (`Zyo\Core\Kernel`)
-O Kernel gerencia a "viagem" da requisição:
-- **Middleware**: A requisição atravessa a cebola (*onion*) de middlewares globais e de rota.
-- **Routing**: O `Router` encontra a rota correspondente e extrai parâmetros.
+O Kernel gerencia a "viagem" da requisição, orquestrando:
+- **Middleware Pipeline**: A requisição atravessa a cebola de middlewares (global/route).
+- **Routing**: O `Router` encontra a rota correspondente.
+
 
 ### 5. Resolução de Controle
 O framework utiliza o **Container de DI** para instanciar o Controller e injetar suas dependências automaticamente no construtor.
